@@ -2,21 +2,19 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 24px 0px;
   background-color: #FFF;
   margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.horario-card--active {
-  background-color: dodgerblue;
 }
 
 .horario-card__horario{
   font-weight: bold;
   font-size: 1.1rem;
   color: black;
+  margin: 12px;
 }
 
 .horario-card__obs {
   color: crimson;
+  margin: 12px;
 }

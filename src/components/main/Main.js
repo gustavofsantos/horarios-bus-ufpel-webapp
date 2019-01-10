@@ -84,17 +84,15 @@ export default class Main extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <Header
-            linha={this.state.linha}
-            linhas={this.linhas}
-            onLinhaChange={this.onLinhaChange}
-          />
-        </div>
-        <div style={{
-          marginTop: '52px'
-        }}>
+      <div styles={{
+        textAlign: 'center'
+      }}>
+        <Header
+          linha={this.state.linha}
+          linhas={this.linhas}
+          onLinhaChange={this.onLinhaChange}
+        />
+        <div className="main-container">
           <Section>
             Próximos horários
           </Section>
