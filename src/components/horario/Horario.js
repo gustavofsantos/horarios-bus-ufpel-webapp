@@ -1,8 +1,8 @@
 import React from 'react';
-import './Horarios.css';
+import './Horario.css';
 
 export default props => (
-  <div className="horario-card">
+  <div className="horario-card" id={props.horario}>
     <h1>
       {props.horario}
     </h1>

@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import './Header.css';
 
-const Header = props => {
-  const [ state, setState ] = useState({ linha: props.linha || 'anglo-centro' });
-
+function Header(props) {
   return (
-    <div>
-      { state.linha }
+    <div className="header">
+      <span className="header__title">
+        { props.linha }
+      </span>
     </div>
   );
 }
