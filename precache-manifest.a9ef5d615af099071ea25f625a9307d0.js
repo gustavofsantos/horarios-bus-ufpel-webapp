@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/horarios-bus-ufpel-webapp/static/js/runtime~main.ab5c62bb.js"
   },
   {
-    "revision": "24e8faeb2dd705447bff",
-    "url": "/horarios-bus-ufpel-webapp/static/js/main.24e8faeb.chunk.js"
+    "revision": "aff8f97ce8dfe552fd0c",
+    "url": "/horarios-bus-ufpel-webapp/static/js/main.aff8f97c.chunk.js"
   },
   {
     "revision": "ca3e6428264a3d3eab72",
     "url": "/horarios-bus-ufpel-webapp/static/js/1.ca3e6428.chunk.js"
   },
   {
-    "revision": "24e8faeb2dd705447bff",
-    "url": "/horarios-bus-ufpel-webapp/static/css/main.5b3b2d0c.chunk.css"
+    "revision": "aff8f97ce8dfe552fd0c",
+    "url": "/horarios-bus-ufpel-webapp/static/css/main.40b769a4.chunk.css"
   },
   {
-    "revision": "02c5ff9814643134b2718ad28e9e3a1c",
+    "revision": "0d514a1bf97ce07856176d7c2e71369b",
     "url": "/horarios-bus-ufpel-webapp/index.html"
   }
 ];
