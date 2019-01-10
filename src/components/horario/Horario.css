@@ -1,0 +1,18 @@
+.horario-card {
+  background-color: #FFF;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.horario-card--active {
+  background-color: dodgerblue;
+}
+
+.horario-card__title {
+  font-weight: bold;
+  color: black;
+}
+
+.horario-card__observation {
+  color: crimson;
+}
