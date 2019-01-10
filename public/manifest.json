@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Bus UFPel",
+  "name": "Horários do Ônibus Institucional da UFPel",
   "icons": [
     {
       "src": "favicon.ico",

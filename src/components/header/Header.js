@@ -1,29 +1,25 @@
 import React from 'react';
+import prettyLinha from '../../lib/prettyLinha';
+
 import './Header.css';
 
-export default class Header extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      open: false,
-      linha: props.linha
-    }
-  }
-
-  toggleOpen() {
-    this.setState({
-      open: !this.state.open
-    });
-  }
-
-  render() {
+export default function Header(props) {
     return (
       <div className="header">
-        <span className="header__title">
-          { this.state.linha }
-        </span>
+        <select className="header__select" onChange={ev => props.onLinhaChange(ev.target.value)}>
+          {
+            props.linhas.map((linha, index) =>
+              <option 
+                className="header__select--option"
+                key={index}
+                value={linha}>
+                {
+                  prettyLinha(linha)
+                }
+              </option>
+            )
+          }
+        </select>
       </div>
     );
-  }
 }

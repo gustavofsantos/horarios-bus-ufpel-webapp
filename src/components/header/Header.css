@@ -1,20 +1,63 @@
 .header {
-  overflow: hidden;
-  position: fixed;
   top: 0;
-  width: 100%;
-  background-color: #FFF;
   padding: 1.2rem;
   display: flex;
   flex-direction: row;
-  margin-bottom: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 32px 0px;
+  margin-bottom: -1rem;
 }
 
-.header__title {
-
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #FFF;
+  background-image: none;
 }
 
-.header__dropdown-icon {
+/* Custom Select */
+.header__select {
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+  line-height: 3;
+  background: #FFF;
+  overflow: hidden;
+  border-radius: .25em;
+}
 
+select {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  color: #121212;
+  cursor: pointer;
+}
+select::-ms-expand {
+  display: none;
+}
+/* Arrow */
+.header__select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1em;
+  background: #34495e;
+  pointer-events: none;
+}
+/* Transition */
+.header__select:hover::after {
+  color: #f39c12;
+}
+.header__select::after {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
 }

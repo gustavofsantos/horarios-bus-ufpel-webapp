@@ -46,10 +46,14 @@
 }
 
 .horario-grande__header--linha {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 900;
   color: rgba(255, 255, 255, 0.7)
 }
 
 .horario-grande__header--observacao {
+  font-size: 14px;
   font-weight: bold;
 }
 

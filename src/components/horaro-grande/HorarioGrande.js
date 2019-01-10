@@ -1,5 +1,6 @@
 import React from 'react';
 import './HorarioGrande.css';
+import prettyLinha from '../../lib/prettyLinha';
 
 export default function HorarioGrande(props) {
 
@@ -24,7 +25,7 @@ export default function HorarioGrande(props) {
     <div className={`horario-grande ${matchBackground(props.linha)}`}>
       <div className="horario-grande__header">
         <span className="horario-grande__header--linha">
-          {props.linha}
+          { prettyLinha(props.linha) }
         </span>
         <span className="horario-grande__header--observacao">
           {props.observacao}

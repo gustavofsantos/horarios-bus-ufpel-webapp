@@ -1,12 +1,9 @@
 body {
-  align-self: center;
-  max-width: 40rem;
   background: #EFEFEF;
 }
 
 .main-container {
-  display: block;
-  margin-top: 56px;
+  width: 100vw;
   background-color: #FFF;
   border-right: 1px solid #E0E0E0;
   border-left: 1px solid #E0E0E0;

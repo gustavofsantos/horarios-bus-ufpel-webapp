@@ -1,8 +1,9 @@
-::-webkit-scrollbar{width:2px;height:2px;}
-::-webkit-scrollbar-button{width:2px;height:2px;}
-
 .proximos-horarios {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
+}
+
+.proximos-horarios:hover {
+  flex-wrap: unset;
 }

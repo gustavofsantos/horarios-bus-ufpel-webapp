@@ -6,13 +6,16 @@ import ProximosHorarios from '../proximos-horarios/ProximosHorarios';
 import getHorarios from '../../lib/getHorarios';
 
 import './Main.css';
+import Carregando from '../carregando/Carregando';
+import proximoHorario from '../../lib/proximoHorario';
 
 export default class Main extends React.Component {
 
   state = {
     linha: 'anglo-ru',
     horarios: [],
-    proximosHorarios: []
+    proximosHorarios: [],
+    todosHorarios: {}
   }
 
   linhas = [
@@ -23,90 +26,79 @@ export default class Main extends React.Component {
     'capao-anglo'
   ];
 
-  async onLinhaChange(linha) {
+  onLinhaChange = async (linha) => {
     try {
       const res = await getHorarios();
       const horarios = res[linha];
 
       this.setState({
         linha,
-        horarios
+        horarios,
+        todosHorarios: res
       });
     } catch (e) {
       console.error(e);
     }
   }
 
-  proximoBus() {
-    const dataAgora = new Date();
-    const horaAgora = dataAgora.getHours();
-    const minAgora = dataAgora.getMinutes();
-  }
+  computProximosHorarios = () => {
+    const { todosHorarios } = this.state;
+    const linhas = Object.keys(todosHorarios);
 
-  computProximosHorarios() {
-    const horarios = [
-      {
-        linha: 'anglo-ru',
-        proximoHorario: '10:40',
-        observacao: 'CEU'
-      },
-      {
-        linha: 'anglo-med',
-        proximoHorario: '11:20',
-        observacao: ''
-      },
-      {
-        linha: 'anglo-esef',
-        proximoHorario: '10:55',
-        observacao: ''
-      },
-      {
-        linha: 'anglo-capao',
-        proximoHorario: '11:00',
-        observacao: 'CEU'
-      },
-      {
-        linha: 'capao-anglo',
-        proximoHorario: '12:00',
-        observacao: 'CEU'
-      },
-    ];
+    const horarios = linhas.map(linha => {
+      const prox = proximoHorario(todosHorarios[linha]);
+
+      console.log('prox: ', prox);
+
+      if (typeof prox === 'object') {
+        return ({
+          linha,
+          proximoHorario: prox ? prox.horario : '',
+          observacao: prox ? prox.ceu ? 'CEU' : '' : ''
+        })
+      } else {
+        return null;
+      }
+    });
 
     this.setState({
       proximosHorarios: horarios
     });
   }
 
-  async componentDidMount() {
+  async componentWillMount() {
     await this.onLinhaChange(this.state.linha);
     this.computProximosHorarios();
   }
 
   render() {
     return (
-      <div styles={{
-        textAlign: 'center'
-      }}>
-        <Header
-          linha={this.state.linha}
-          linhas={this.linhas}
-          onLinhaChange={this.onLinhaChange}
-        />
-        <div className="main-container">
-          <Section>
-            Próximos horários
-          </Section>
+      <div>
+        {
+          this.state.horarios.length ?
+          <div className="main-container">
+            <Header
+              linha={this.state.linha}
+              linhas={this.linhas}
+              onLinhaChange={this.onLinhaChange}
+            />
+            <Section>
+              Próximos horários
+            </Section>
 
-          <ProximosHorarios
-            horarios={this.state.proximosHorarios}
-          />
+            <ProximosHorarios
+              horarios={this.state.proximosHorarios}
+            />
 
-          <Section>
-            Próximos horários
-          </Section>
+            <Section>
+              Todos horários
+            </Section>
 
-          <ListaHorarios horarios={this.state.horarios} />
-        </div>
+            <ListaHorarios horarios={this.state.horarios} />
+          </div>
+          :
+          <Carregando />
+        }
       </div>
     );
   }

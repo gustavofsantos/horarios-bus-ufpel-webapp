@@ -1,0 +1,8 @@
+.carregando {
+  width: 100%;
+  height: 100%;
+}
+
+.carregando__texto {
+  text-align: center;
+}
