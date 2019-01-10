@@ -13,20 +13,23 @@ select {
   appearance: none;
   outline: 0;
   box-shadow: none;
-  border: 0 !important;
   background: #FFF;
   background-image: none;
 }
 
 /* Custom Select */
 .header__select {
+  display: flex;
   font-size: 20px;
   font-weight: 900;
   text-transform: uppercase;
   position: relative;
+  text-align: center;
   display: block;
   line-height: 3;
+  margin-left: -2px;
   background: #FFF;
+  border: 2px solid #e0e0e0;
   overflow: hidden;
   border-radius: .25em;
 }
@@ -49,7 +52,6 @@ select::-ms-expand {
   right: 0;
   bottom: 0;
   padding: 0 1em;
-  background: #34495e;
   pointer-events: none;
 }
 /* Transition */
