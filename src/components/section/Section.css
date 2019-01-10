@@ -1,0 +1,12 @@
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 1rem;
+}
+
+.section__text {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #121212;
+}

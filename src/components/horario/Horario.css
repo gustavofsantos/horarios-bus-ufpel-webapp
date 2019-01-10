@@ -1,4 +1,7 @@
 .horario-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: #FFF;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -8,11 +11,12 @@
   background-color: dodgerblue;
 }
 
-.horario-card__title {
+.horario-card__horario{
   font-weight: bold;
+  font-size: 1.1rem;
   color: black;
 }
 
-.horario-card__observation {
+.horario-card__obs {
   color: crimson;
 }

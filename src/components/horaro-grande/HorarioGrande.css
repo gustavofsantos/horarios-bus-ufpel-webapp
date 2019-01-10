@@ -1,0 +1,66 @@
+.horario-grande {
+  flex: 0 0 auto;
+  border: none;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px;
+  width: 246px;
+  height: 128px;
+  color: #FFF;
+  padding: 8px;
+  margin: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.horario-grande:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 18px 0px;
+}
+
+.background-anglo-ru {
+  background-image: linear-gradient(to bottom right, #2E3192, #1BFFFF);
+}
+
+.background-anglo-med {
+  background-image: linear-gradient(to bottom right, #D4145A, #FBB03B);
+}
+
+.background-anglo-esef {
+  background-image: linear-gradient(to bottom right, #009245, #FCEE21);
+}
+
+.background-anglo-capao {
+  background-image: linear-gradient(to bottom right, #312A6C, #852D91);
+}
+
+.background-capao-anglo {
+  background-image: linear-gradient(to bottom right, #3A3897, #A3A1FF);
+}
+
+.background-white {
+  background-color: #FFF;
+}
+
+.horario-grande__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.horario-grande__header--linha {
+  color: rgba(255, 255, 255, 0.7)
+}
+
+.horario-grande__header--observacao {
+  font-weight: bold;
+}
+
+.horario-grande__horario-container {
+  display: flex;
+  padding-bottom: 8px;
+}
+
+.horario-grande__horario-container--horario {
+  font-size: 68px;
+  font-weight: bold;
+  align-self: flex-end;
+  margin-top: auto;
+}

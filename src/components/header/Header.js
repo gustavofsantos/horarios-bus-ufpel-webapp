@@ -1,14 +1,29 @@
 import React from 'react';
 import './Header.css';
 
-function Header(props) {
-  return (
-    <div className="header">
-      <span className="header__title">
-        { props.linha }
-      </span>
-    </div>
-  );
-}
+export default class Header extends React.Component {
+  constructor(props) {
+    super(props);
 
-export default Header;
+    this.state = {
+      open: false,
+      linha: props.linha
+    }
+  }
+
+  toggleOpen() {
+    this.setState({
+      open: !this.state.open
+    });
+  }
+
+  render() {
+    return (
+      <div className="header">
+        <span className="header__title">
+          { this.state.linha }
+        </span>
+      </div>
+    );
+  }
+}

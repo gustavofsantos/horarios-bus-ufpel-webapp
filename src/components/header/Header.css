@@ -1,9 +1,14 @@
 .header {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #FFF;
+  padding: 1.2rem;
   display: flex;
   flex-direction: row;
   margin-bottom: 1rem;
-  right: 0;
-  left: 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px;
 }
 
 .header__title {
@@ -11,5 +16,5 @@
 }
 
 .header__dropdown-icon {
-  
+
 }

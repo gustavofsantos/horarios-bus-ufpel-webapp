@@ -8,7 +8,7 @@ export default props => (
       props.horarios.map((horario, index) => 
         <Horario 
           horario={horario.horario}
-          observacao={horario.observacao}
+          observacao={horario.ceu ? 'CEU' : ''}
           key={index}
         />
       )
