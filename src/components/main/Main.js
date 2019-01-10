@@ -48,8 +48,6 @@ export default class Main extends React.Component {
     const horarios = linhas.map(linha => {
       const prox = proximoHorario(todosHorarios[linha]);
 
-      console.log('prox: ', prox);
-
       if (typeof prox === 'object') {
         return ({
           linha,
