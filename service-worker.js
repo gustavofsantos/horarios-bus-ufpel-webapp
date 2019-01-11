@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/horarios-bus-ufpel-webapp/precache-manifest.54357872d7c36c4c4e36f36fcc7ff9c6.js"
+  "/horarios-bus-ufpel-webapp/precache-manifest.d05bf8b3c742ad71c67c135c3cb21df1.js"
 );
 
 workbox.clientsClaim();
