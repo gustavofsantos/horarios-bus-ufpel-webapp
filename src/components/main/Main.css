@@ -3,7 +3,10 @@ body {
 }
 
 .main-container {
+  isolation: isolate;
   width: 100%;
-  height: 100vh;
-  background-color: #FFF;
+  max-width: 1024px;
+  height: 100%;
+  /* background-image: linear-gradient(#808080, #E6E6E6); */
+  background-color: whitesmoke;
 }

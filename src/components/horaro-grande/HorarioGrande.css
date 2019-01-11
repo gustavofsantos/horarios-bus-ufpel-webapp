@@ -1,4 +1,5 @@
 .horario-grande {
+  position: relative;
   flex: 0 0 auto;
   border: none;
   border-radius: 6px;
@@ -8,38 +9,37 @@
   padding: 8px;
   margin: 1rem;
   transition: box-shadow 0.3s ease-out;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px 0px;
 }
 
 .horario-grande:hover {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 18px 0px;
-  transition: box-shadow 0.3s ease-in;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 18px 0px;
+  transition: all 0.3s ease-in;
 }
 
 .background-anglo-ru {
-  background-image: linear-gradient(to bottom right, #0a0fad, #1bffff);
-  transition: background-image 0.3s ease-out;
-}
-
-.background-anglo-ru:hover {
-  background-image: linear-gradient(to bottom right, #0a0fad, #1bffff) #0a0fad top;
-  transition: background-image 0.3s ease-in;
+  background-image: linear-gradient(to right, #0a0fad, #1bffff);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#0a0fad), to(#1bffff));
 }
 
 .background-anglo-med {
   background-image: linear-gradient(to bottom right, #D4145A, #FBB03B);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#D4145A), to(#FBB03B));
 }
 
 .background-anglo-esef {
   background-image: linear-gradient(to bottom right, #009245, #FCEE21);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#009245), to(#FCEE21));
 }
 
 .background-anglo-capao {
   background-image: linear-gradient(to bottom right, #312A6C, #852D91);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#312A6C), to(#852D91));
 }
 
 .background-capao-anglo {
   background-image: linear-gradient(to bottom right, #3A3897, #A3A1FF);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#3A3897), to(#A3A1FF));
 }
 
 .background-white {
@@ -61,17 +61,18 @@
 
 .horario-grande__header--observacao {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .horario-grande__horario-container {
+  isolation: isolate;
   display: flex;
-  padding-bottom: 8px;
+  flex-direction: row;
+  height: 100%;
 }
 
 .horario-grande__horario-container--horario {
+  height: 100%;
   font-size: 68px;
   font-weight: bold;
-  align-self: flex-end;
-  margin-top: auto;
 }
