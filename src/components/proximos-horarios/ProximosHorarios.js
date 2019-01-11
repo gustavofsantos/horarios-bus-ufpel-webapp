@@ -9,12 +9,16 @@ export default function ProximosHorarios(props) {
     <div className="proximos-horarios">
       {
         props.horarios.map((horario, index) =>
-          <HorarioGrande
-            key={index}
-            linha={horario.linha}
-            observacao={horario.observacao}
-            horario={horario.proximoHorario}
-          />
+          horario.proximoHorario ? 
+            <HorarioGrande
+              key={index}
+              linha={horario.linha}
+              observacao={horario.observacao}
+              horario={horario.proximoHorario}
+            />
+          :
+            <div>
+            </div>
         )
       }
     </div>

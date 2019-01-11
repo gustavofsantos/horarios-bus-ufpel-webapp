@@ -57,7 +57,8 @@ export default class Main extends React.Component {
       } else {
         return null;
       }
-    });
+    })
+    .filter(horario => horario.proximoHorario ? true : false);
 
     this.setState({
       proximosHorarios: horarios
@@ -80,13 +81,22 @@ export default class Main extends React.Component {
               linhas={this.linhas}
               onLinhaChange={this.onLinhaChange}
             />
-            <Section>
-              Próximos horários
-            </Section>
 
-            <ProximosHorarios
-              horarios={this.state.proximosHorarios}
-            />
+            {
+              this.state.proximosHorarios.length > 0 ? 
+                <div>
+                  <Section>
+                    Próximos horários
+                  </Section>
+
+                  <ProximosHorarios
+                    horarios={this.state.proximosHorarios}
+                  />
+                </div>
+              :
+                <div>
+                </div>
+            }
 
             <Section>
               Todos horários

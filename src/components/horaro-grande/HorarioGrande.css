@@ -2,21 +2,28 @@
   flex: 0 0 auto;
   border: none;
   border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px;
   width: 246px;
   height: 128px;
   color: #FFF;
   padding: 8px;
   margin: 1rem;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease-out;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px;
 }
 
 .horario-grande:hover {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 6px 18px 0px;
+  transition: box-shadow 0.3s ease-in;
 }
 
 .background-anglo-ru {
-  background-image: linear-gradient(to bottom right, #2E3192, #1BFFFF);
+  background-image: linear-gradient(to bottom right, #0a0fad, #1bffff);
+  transition: background-image 0.3s ease-out;
+}
+
+.background-anglo-ru:hover {
+  background-image: linear-gradient(to bottom right, #0a0fad, #1bffff) #0a0fad top;
+  transition: background-image 0.3s ease-in;
 }
 
 .background-anglo-med {
