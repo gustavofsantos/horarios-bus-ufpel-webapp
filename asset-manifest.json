@@ -1,13 +1,13 @@
 {
   "main.css": "/horarios-bus-ufpel-webapp/static/css/main.914b6876.chunk.css",
-  "main.js": "/horarios-bus-ufpel-webapp/static/js/main.0e55347e.chunk.js",
-  "main.js.map": "/horarios-bus-ufpel-webapp/static/js/main.0e55347e.chunk.js.map",
+  "main.js": "/horarios-bus-ufpel-webapp/static/js/main.9e29edb5.chunk.js",
+  "main.js.map": "/horarios-bus-ufpel-webapp/static/js/main.9e29edb5.chunk.js.map",
   "static/js/1.ca3e6428.chunk.js": "/horarios-bus-ufpel-webapp/static/js/1.ca3e6428.chunk.js",
   "static/js/1.ca3e6428.chunk.js.map": "/horarios-bus-ufpel-webapp/static/js/1.ca3e6428.chunk.js.map",
   "runtime~main.js": "/horarios-bus-ufpel-webapp/static/js/runtime~main.ab5c62bb.js",
   "runtime~main.js.map": "/horarios-bus-ufpel-webapp/static/js/runtime~main.ab5c62bb.js.map",
   "static/css/main.914b6876.chunk.css.map": "/horarios-bus-ufpel-webapp/static/css/main.914b6876.chunk.css.map",
   "index.html": "/horarios-bus-ufpel-webapp/index.html",
-  "precache-manifest.d05bf8b3c742ad71c67c135c3cb21df1.js": "/horarios-bus-ufpel-webapp/precache-manifest.d05bf8b3c742ad71c67c135c3cb21df1.js",
+  "precache-manifest.89132e69e01668099639c43e3dd562a5.js": "/horarios-bus-ufpel-webapp/precache-manifest.89132e69e01668099639c43e3dd562a5.js",
   "service-worker.js": "/horarios-bus-ufpel-webapp/service-worker.js"
 }
